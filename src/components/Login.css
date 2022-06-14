@@ -1,0 +1,57 @@
+.split {
+    height: 90%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 20;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: rgb(248, 129, 129);
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: rgb(247, 154, 156);
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    color:rgb(249, 0, 175);
+    font-size: 45px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centeredtwo {
+    position: absolute;
+    margin: 60px;
+    font-size: 30px;
+    color:rgb(186, 5, 8);
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+
+  .text {
+    top: 35%;
+    color:rgb(249, 0, 175);
+    font-size: 45px;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 3px solid rgb(249, 5, 5);
+    outline: none;
+  }

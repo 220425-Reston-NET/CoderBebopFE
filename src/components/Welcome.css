@@ -1,0 +1,10 @@
+.welcome{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(255, 193, 232);
+    font-size: 78px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: fuchsia;
+}
