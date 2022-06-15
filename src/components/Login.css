@@ -25,7 +25,7 @@
     color:rgb(249, 0, 175);
     font-size: 45px;
     position: absolute;
-    top: 15%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -54,4 +54,18 @@
     box-sizing: border-box;
     border: 3px solid rgb(249, 5, 5);
     outline: none;
+  }
+
+  .button {
+    background-color: #af4c99;
+    color: white;
+    padding: 5px 32px;
+    font-size: 18px;
+  }
+
+  .buttontwo {
+    background-color: #af4c99;
+    color: white;
+    padding: 30px 32px;
+    font-size: 32px;
   }

@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './Button'
 import Input from './Input'
 import './Login.css'
 
@@ -14,6 +15,9 @@ function Login() {
             Enter PIN:
             <br></br>
             <Input/>
+            <br></br>
+            <br></br>
+            <Button/>
         </div>
     </div>
   )
