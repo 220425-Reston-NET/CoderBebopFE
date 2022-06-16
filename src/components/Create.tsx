@@ -1,6 +1,6 @@
 import React from 'react'
 import ButtonTwo from './ButtonTwo'
-import './Login.css'
+import './Welcome.css'
 
 function Create() {
   return (

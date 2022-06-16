@@ -6,7 +6,7 @@ function ButtonTwo() {
     }
 
   return (
-    <button className='buttontwo' onClick={clickHandler}>Create Account</button>
+    <button className="btn btn-primary" type="button">Button</button>
   )
 }
 
