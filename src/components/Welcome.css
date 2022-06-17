@@ -1,12 +1,13 @@
 .welcome{
     height: 100%;
     width: 100%;
-    padding: 20px;
-    background-color: rgb(28, 49, 152);
+    padding: 40px;
+    background-color: rgb(62, 91, 241);
+    /*background-image: url("C:\Users\clari\Documents\P2\FRONTEND\sax.png");*/
     font-size: 78px;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(0, 102, 255);
+    color: rgb(245, 246, 248);
 }
 
 .split {
@@ -33,7 +34,7 @@
   
   /* If you want the content centered horizontally and vertically */
   .centered {
-    color:rgb(0, 62, 249);
+    color:rgb(244, 246, 249);
     font-size: 45px;
     position: absolute;
     top: 30%;
@@ -46,7 +47,7 @@
     position: absolute;
     margin: 60px;
     font-size: 30px;
-    color:rgb(5, 23, 186);
+    color:rgb(244, 245, 247);
     top: 35%;
     left: 20%;
     transform: translate(-50%, -50%);
@@ -68,15 +69,5 @@
   }
 
   .button {
-    background-color: #4c77af;
-    color: white;
-    padding: 5px 32px;
-    font-size: 18px;
-  }
-
-  .buttontwo {
-    background-color: #4c77af;
-    color: white;
-    padding: 30px 32px;
-    font-size: 32px;
+    box-shadow: 10px 10px rgb(19, 2, 79);
   }

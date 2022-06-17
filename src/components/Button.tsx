@@ -7,7 +7,7 @@ function Button() {
     }
 
   return (
-    <button className='button' onClick={clickHandler}>Submit</button>
+    <button className="button btn btn-primary" type="button">Submit</button>
   )
 }
 

@@ -6,7 +6,7 @@ function ButtonTwo() {
     }
 
   return (
-    <button className="btn btn-primary" type="button">Button</button>
+    <button type="button" className="button btn btn-primary btn-lg">Create an Account</button>
   )
 }
 
