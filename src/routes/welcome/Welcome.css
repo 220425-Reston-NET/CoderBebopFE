@@ -1,0 +1,32 @@
+.login-container{
+    margin-top: 100px;
+    margin-left: 100px;
+    align-items: left;
+} 
+
+.create-container{
+    float: right;
+    margin-right: 400px;
+    margin-top: -100px;
+}
+
+.input-container{
+    width: 400px;
+}
+
+.input-container input{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* body{
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        pink 0%,
+        pink 50%,
+        paleturquoise 50%,
+        paleturquoise 100%
+    );
+} */
