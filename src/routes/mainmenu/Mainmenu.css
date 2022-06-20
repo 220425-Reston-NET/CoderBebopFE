@@ -1,0 +1,18 @@
+.mainmenu{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.container{
+    order:0;
+    width: 400px;
+    margin-top: 200px;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.rightmarg{
+    margin-right: 20px;
+}

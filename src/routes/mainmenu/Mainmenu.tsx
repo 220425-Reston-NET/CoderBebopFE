@@ -1,8 +1,19 @@
 import React from 'react'
+import './Mainmenu.css'
 
 function Mainmenu() {
   return (
-    <div>Mainmenu</div>
+    <form className='mainmenu'>
+      <div className='container'>
+        <button type="button" className="btn btn-primary btn-lg rightmarg">Deposit</button>
+        <button type="button" className="btn btn-secondary btn-lg rightmarg">Withdraw</button>          
+        <button type="button" className="btn btn-primary btn-lg">Transfer</button>
+      </div>
+
+      <div className='container'>
+        <button type="button" className="btn btn-primary btn-lg">Exit</button>
+      </div>
+    </form>
   )
 }
 
