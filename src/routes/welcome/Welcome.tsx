@@ -7,8 +7,9 @@ function Welcome() {
     return (
         <form className="welcome-container">
             <div className="input-container">
+            <label htmlFor="inputCardNumber" className='topmarg'><h2>Login</h2></label>
                 <div>
-                <label htmlFor="inputCardNumber" className='topmarg'>Card Number</label>
+                <label htmlFor="loginlabel" className='topmarg'>Card Number</label>
                 <input type="text" className="form-control" id="inputCardNumber" aria-describedby="emailHelp" placeholder="" />
                 </div>
                 <div>
@@ -22,7 +23,7 @@ function Welcome() {
                 
 
             <div className='create-container'>
-                <label htmlFor="inputCardNumber" className='topmarg'><h2>No Account?</h2></label>
+                <label htmlFor="buttonlabel" className='topmarg'><h2>No Account?</h2></label>
                 <br></br>
                 <br></br>
                 <button type="submit" className="btn btn-primary">Create Account</button>

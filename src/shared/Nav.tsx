@@ -20,6 +20,12 @@ function Nav() {
             <li className="nav-item">
               <Link to="/createcustomer" className="nav-link">Create an Account</Link>
             </li>
+            <li className="nav-item">
+              <Link to="/chooseaccount" className="nav-link">Accounts</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/deposit" className="nav-link">Deposit</Link>
+            </li>
           </ul>
         </div>
       </div>

@@ -6,7 +6,6 @@
 } 
 
 .create-container{
-    order:2;
     margin-top: -250px;
     margin-right: 450px;
     align-self: flex-end;
@@ -14,8 +13,7 @@
 }
 
 .input-container{
-    order:1;
-    width: 400px;
+    width: 300px;
     margin-top: 200px;
     margin-left: 350px;
     align-self: flex-start;
