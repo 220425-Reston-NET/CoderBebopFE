@@ -1,9 +1,15 @@
 import React from 'react'
 import './Welcome.css'
-
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Welcome() {
-
+    const navigate = useNavigate();
+    const gotToCreateAccount = () => {
+  
+        // This will navigate to first component
+        navigate('/createcustomer'); 
+      };
     return (
         <form className="welcome-container">
             <div className="input-container">
@@ -26,7 +32,9 @@ function Welcome() {
                 <label htmlFor="buttonlabel" className='topmarg'><h2>No Account?</h2></label>
                 <br></br>
                 <br></br>
-                <button type="submit" className="btn btn-primary">Create Account</button>
+                <button type="submit" className="btn btn-primary">
+                <div onClick={gotToCreateAccount}>Create Account</div>
+                </button>
             </div>
         </form>
     )
