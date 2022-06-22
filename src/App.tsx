@@ -8,6 +8,7 @@ import Mainmenu from './routes/mainmenu/Mainmenu';
 import CreateCustomer from './routes/createcustomer/CreateCustomer';
 import ChooseAccount from './routes/chooseaccount/ChooseAccount';
 import Deposit from './routes/deposit/Deposit';
+import Transfer from './routes/transfer/Transfer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/createcustomer' element={<CreateCustomer/>}/>
       <Route path='/chooseaccount' element={<ChooseAccount/>}/>
       <Route path='/deposit' element={<Deposit/>}/>
+      <Route path='/transfer' element={<Transfer/>}/>
     </Routes>
     </>
   );
