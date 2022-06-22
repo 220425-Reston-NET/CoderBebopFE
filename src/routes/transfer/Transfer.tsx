@@ -30,13 +30,13 @@ function Withdraw(){
             <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="option3"/>
             <label className="form-check-label" htmlFor="inlineRadio3">Money Market</label>
         </div>
-        <div className="form-group col-md-4">
-            <label htmlFor="inputAddress">Please choose the amount you want to transfer:</label>
-            <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" /*onChange={}*/ />
-        </div>       
-        
+        <h5>Please choose the amount you want to transfer:</h5>
+        <div className="transfer-container">
+            <label htmlFor="inputAddress"></label>
+            <input type="text" className="form-control" id="inputAddress" placeholder="$$$" /*onChange={}*/ />
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
     </>
-
 
     )
 }
