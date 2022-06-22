@@ -31,7 +31,7 @@ function Withdraw(){
             <label className="form-check-label" htmlFor="inlineRadio3">Money Market</label>
         </div>
         <div className="form-group col-md-4">
-            <label htmlFor="inputAddress">Please choosee the amount you want to transfer:</label>
+            <label htmlFor="inputAddress">Please choose the amount you want to transfer:</label>
             <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" /*onChange={}*/ />
         </div>       
         
