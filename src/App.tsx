@@ -8,7 +8,8 @@ import Mainmenu from './routes/mainmenu/Mainmenu';
 import CreateCustomer from './routes/createcustomer/CreateCustomer';
 import ChooseAccount from './routes/chooseaccount/ChooseAccount';
 import Deposit from './routes/deposit/Deposit';
-import Transfer from './routes/transfer/Transfer';
+import Transfer from './routes/createcustomer/transfer/Transfer';
+import { useState } from 'react';
 
 function App() {
   return (

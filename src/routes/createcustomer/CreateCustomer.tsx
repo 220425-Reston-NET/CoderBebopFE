@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './CreateCustomer.css'
-import '../popup/Popup.tsx'
 
 
 function CreateCustomer() {
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    const togglePopup = () => {
-        setIsOpen(!isOpen);
-    }
 
     let CusName: string = '';
     let CusPhone: string = '';
@@ -18,9 +13,10 @@ function CreateCustomer() {
     let CusID: number = 0;
     let ConfirmCusID: number = 0;
 
+    
     function insertName(e: any) {
         CusName = e.target.value;
-
+        
     }
     function insertPhone(e: any) {
         CusPhone = e.target.value;
@@ -37,10 +33,10 @@ function CreateCustomer() {
     function insertConfirmID(e: any) {
         ConfirmCusID = e.target.value;
     }
-
+    
     function onSubmit(e: any) {
         e.preventDefault();
-
+        
         fetch("http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/Customer/AddCustomer", {
             method: 'POST',
             headers: {
@@ -55,14 +51,22 @@ function CreateCustomer() {
                     address: CusAddress,
                     email: CusEmail,
                     cAccID: ConfirmCusID
+
+                   
+                    
                 }
-            )
-        });
-
-
-    }
-
-    return (
+                )
+            });
+            
+            
+        }
+        
+        const navigate = useNavigate();
+        const goToNewCustInfo = () => {
+            navigate('/newcustinfo');
+        };
+        
+        return (
         <form className='createcustomer-container' onSubmit={onSubmit}>
             <div className="form-group col-md-4 ">
                 <label htmlFor="inputName">Name</label>
@@ -94,32 +98,12 @@ function CreateCustomer() {
                 <div>
                     <input type="number" className="form-control" id="inputEmail" placeholder="1" onChange={insertConfirmID} />
                 </div>
+                <div className="col-12 createcustomer-container">
+                    <button type="submit" className="btn btn-primary"><div onClick={goToNewCustInfo}>Create Account</div></button>
                 </div>
-            isOpen && <Popup>content={<>
-        <b>Design your Popup</b>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button>Test button</button>
-        </>}
-        <button type="submit" className="btn btn-primary " onClick={togglePopup}>Create Account</button>
-        handleClose={togglePopup}</Popup>
-
+            </div>
         </form>
     )
 }
 
 export default CreateCustomer
-
-/* 
-<div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-{isOpen && <Popup
-    content={<>
-        <b>Design your Popup</b>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button>Test button</button>
-        </>}
-        <button type="submit" className="btn btn-primary " onClick={togglePopup}>Create Account</button>
-        handleClose={togglePopup}
-    />}
-  </div>
-*/

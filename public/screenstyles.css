@@ -1,0 +1,381 @@
+/* Style sheet created by: Joshua Ballard // March 15 2020 */
+
+input, select, textarea{
+	display: block;
+	margin-bottom: 1em;
+	text-align: left;
+}
+
+#FormContainer{	
+		text-align: left;
+}
+
+#image {
+	align-items:center
+}
+
+
+/* Style for body specifies a background color */
+body {
+	background-color: #368187;
+	font-family: Helvetica;
+	text-decoration: none;
+	color: #245758;
+}
+
+
+a:link {
+  color: #B1EFCE;
+}
+
+/* visited link */
+a:visited {
+  color: #B1D1BC;
+}
+
+/* mouse over link */
+a:hover {
+  color: #B1EFCE;
+  font-style: italic;
+}
+
+/* selected link */
+a:active {
+  color: #B1EFCE;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+img { 
+	max-width: 80%;
+	padding: .5em;
+	background-color: #245758;
+}
+/* Styles for Mobile Layout */
+article h3 {
+	text-align: center;
+}
+
+figure {
+	text-align: center;
+}
+
+figcaption {
+	color:#000066;
+}
+
+section {
+	padding: 1em;
+}
+
+article {
+	margin: 1em;
+	padding: 1em;
+	background-color: #ACB7E6;
+}
+
+/* Style for the container centers the page and specifies the width */
+
+
+#container {
+	font-family: Meridien;
+	font-size: 2em;
+	font-weight: bold;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	align-items: center;
+	text-align: center;
+	margin-top: .5em;
+	margin-bottom: -.25em;
+	padding: 0;
+	text-align: center;
+}
+
+/* Style for the header specifies top margin, background color, rounded corners, and center align content */
+header {
+	font-family: Meridien;
+	font-size: .8em;
+	margin-top: 0em;
+	margin-bottom: -1.75em;
+	text-align: center;
+	padding: 0.2em;
+	color: #245758; 
+}
+
+#banner {
+	text-align: center;
+}
+
+#article {
+
+}
+
+/* Style for nav specifies text properties */
+nav {
+	font-family: Helvetica;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Style specifies padding and margins for unordered list */
+nav ul {
+	padding: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+/* Style for nav li specifies the background color, rounded corners, removes bullet style, and applies margins and pad-ding for list items within the navigation */
+nav li {  
+	background-color: #245758; 
+	border-radius: 1em; 
+	list-style-type: none; 
+	margin: 0.3em; 
+	padding: 0.4em;    
+}  
+
+/* Style changes navigation link text color to white and re-moves the underline */
+nav li a { 
+	color: #B1D1BC; 
+	text-decoration: none; 
+}
+
+/* Style for the main specifies a block display, text properties, margins, padding, rounded corners, and borders  */
+main {
+	
+	display: block;
+	font-family: helvetica;
+	font-size: 1em;
+	margin-top: 0.2em;
+	padding: 0.5em;
+	border-radius: 0em;
+	border-top: solid 0em #1DABB9; 
+	border-bottom: solid 0em #1DABB9;
+	text-align: center;
+	
+}
+
+/* Style for the footer specifies font size, text alignment, and top margin */
+footer {
+	font-size: .70em;
+	text-align: center;
+	margin-top: 2em;
+}
+
+/* Style displays the mobile class */
+.mobile {
+	display: inline;
+} 
+
+/* Style hides the desktop class */
+.desktop {
+	display: none;
+}
+
+																		/* Styles for tablet viewport */
+@media only screen and (min-width: 481px) {
+table, th, td {
+	border: solid 0.1em #245758;
+	border-collapse: collapse;
+	padding: 1em;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+}
+input, select, textarea{
+	display: block;
+	margin-bottom: 1em;
+}
+
+#image {
+	float:left;
+}
+
+#images{
+		text-align: center;
+		align-items:center
+}
+
+#container {
+	font-family: Meridien;
+	font-size: 2em;
+	font-weight: bold;
+	width: 70%;
+	align-items: center;
+	text-align: center;
+}
+
+section{
+		font-size: inherit;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding: 0;
+		text-align: center;
+}
+
+header {
+	font-family: Meridien;
+	font-size: 1em;
+	margin-top: 0.2em;
+	margin-bottom: -2.3em;
+	text-align: center;
+	padding: 0.2em;
+	color: #245758; 
+	border: none;
+	border-radius: 3em;
+	margin-top: 1em;
+}
+	
+	
+
+/* Style specifies display, float, margin, padding, and width for nav list items */
+nav li {
+	display: inline;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding-left: 0;
+	padding-right: 0;
+	width: 18%;
+}
+
+/* Style specifies clear and margin for the main element */
+main {
+		text-align: left;
+}
+
+/* Style hides the mobile class */
+.mobile {
+	display: none;
+}
+
+/* Style displays the desktop class */
+.desktop {
+	display: inline;
+}
+
+}
+
+													/* Styles for desktop viewport */
+@media only screen and (min-width: 950px) {
+table, th, td {
+	border: solid 0.1em #245758;
+	border-collapse: collapse;
+	padding: 1em;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+}
+input, select, textarea{
+	display: block;
+	margin-bottom: 1em;
+}
+
+
+section{
+		font-size: inherit;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding: 0;
+		text-align: center;
+}
+
+
+header {
+	font-family: Meridien;
+	font-size: 1em;
+	margin-top: 0.2em;
+	margin-bottom: -2.3em;
+	text-align: center;
+	padding: 0.2em;
+	color: #245758; 
+	border: none;
+	border-radius: 3em;
+	margin-top: 1em;
+}
+
+
+
+section article {
+	margin: 1em;
+	padding: 1em;
+	background-color: #ACB7E6;
+}
+
+#images{
+		text-align: center;
+		align-items:center
+}
+
+#image {
+	float:left;
+}
+
+/* Style specifies width for container */ 
+#container {
+	font-family: Meridien;
+	font-size: 2.5em;
+	font-weight: bold;
+	width: 70%;
+	align-items: center;
+	text-align: center;
+}
+
+/* Style specifies margin and padding for the unordered list within the nav */
+nav ul {
+    margin: 0;
+	padding-left: 0.50%;
+	padding-right: 0.50%;
+}
+
+/* Style for navigation list items specifies a border radius, border, margin, width, and padding */ 
+nav li {
+	background-color: #368187;
+	border-radius: 0;
+	margin-left: 0;
+	margin-right: 0; 
+	padding: 0;
+	width: 18%;   
+	
+}
+
+/* Style for navigation links specifies display and padding */
+nav li a {
+	display: inline-block;
+	padding: 0.7em;
+	font-size: 1.25em;
+	
+}
+
+/* Style rules for pseudo-classes */
+nav li a:link {
+	color: #B1EFCE;	
+	text-decoration: none;
+}
+
+nav li a:hover {
+	color: #B1EFCE;
+	font-size: 1.5em;
+}
+
+/* Style for main specifies border, border radius, box-shadow, and margin */
+main {
+
+		text-align: left;
+}
+
+/* Style specifies a gradient for the body element */ 
+body {
+	background: #368187; /* Firefox */ 
+	background: #368187; /* Opera */ 
+	background: #368187; /* Chrome, Safari */
+	background: #368187; 
+
+}
+}
