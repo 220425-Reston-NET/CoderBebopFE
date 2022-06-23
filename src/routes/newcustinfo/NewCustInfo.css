@@ -1,11 +1,11 @@
-.createcustomer-container{
+.info-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
 }
 
-.button{
+.styling-container{
     margin-top: 20px;
-    align-items: center;
+    width: 600px;
+    text-align: center;
 }
