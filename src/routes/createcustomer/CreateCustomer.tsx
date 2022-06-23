@@ -51,6 +51,9 @@ function CreateCustomer() {
                     address: CusAddress,
                     email: CusEmail,
                     cAccID: ConfirmCusID
+
+                   
+                    
                 }
                 )
             });
@@ -97,10 +100,8 @@ function CreateCustomer() {
                 </div>
                 <div className="col-12 createcustomer-container">
                     <button type="submit" className="btn btn-primary"><div onClick={goToNewCustInfo}>Create Account</div></button>
-                {/* testing */}
                 </div>
             </div>
-
         </form>
     )
 }
