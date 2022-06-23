@@ -13,14 +13,10 @@ function CreateCustomer() {
     let CusID: number = 0;
     let ConfirmCusID: number = 0;
 
-    const navigate = useNavigate();
-    const goToNewCustInfo = () => {
-        navigate('/newcustinfo');
-    };
-
+    
     function insertName(e: any) {
         CusName = e.target.value;
-
+        
     }
     function insertPhone(e: any) {
         CusPhone = e.target.value;
@@ -37,10 +33,10 @@ function CreateCustomer() {
     function insertConfirmID(e: any) {
         ConfirmCusID = e.target.value;
     }
-
+    
     function onSubmit(e: any) {
         e.preventDefault();
-
+        
         fetch("http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/Customer/AddCustomer", {
             method: 'POST',
             headers: {
@@ -56,14 +52,18 @@ function CreateCustomer() {
                     email: CusEmail,
                     cAccID: ConfirmCusID
                 }
-            )
-        });
-
-
-    }
-
-
-    return (
+                )
+            });
+            
+            
+        }
+        
+        const navigate = useNavigate();
+        const goToNewCustInfo = () => {
+            navigate('/newcustinfo');
+        };
+        
+        return (
         <form className='createcustomer-container' onSubmit={onSubmit}>
             <div className="form-group col-md-4 ">
                 <label htmlFor="inputName">Name</label>
