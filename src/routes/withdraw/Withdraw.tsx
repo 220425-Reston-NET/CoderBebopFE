@@ -1,10 +1,10 @@
 import React from 'react'
-import './Deposit.css'
+import './Withdraw.css'
 
-function Deposit() {
+function Withdraw() {
   return (
-    <div className='deposit-container'>
-    <h4>Enter amount you would like to deposit:</h4>
+    <div className='withdraw-container'>
+    <h4>Enter amount you would like to withdraw:</h4>
     <div className="input-group mb-3" style={{width: 600, marginTop: 20}}>
   <span className="input-group-text">$</span>
   <span className="input-group-text">0.00</span>
@@ -14,4 +14,4 @@ function Deposit() {
   )
 }
 
-export default Deposit
+export default Withdraw

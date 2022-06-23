@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './Welcome.css'
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 function Welcome(){
     const navigate = useNavigate();
-    
+
     let userCard = "";
     let userPin = "";
 
@@ -19,7 +18,7 @@ function Welcome(){
         navigate('/createcustomer'); 
     };                         
     
-    function Login() {
+ 
         // make a function if loging info matches are user in db = welcome page else
         // user not found message display.
         const [users, setUser] = useState({
@@ -31,7 +30,7 @@ function Welcome(){
           cAccID:0
         });
     
-      
+    
         function GetCustomerCard(e: React.ChangeEvent<HTMLInputElement>) {
           userCard = e.target.value;
           console.log(userCard);
@@ -60,9 +59,9 @@ function Welcome(){
       
               goToMainMenu();
             });
-        }
+        }//end of onSubmit
 
-
+     
     return (
         <form onSubmit={onSubmit}>
         <form className="welcome-container">{/* Missing attribute */}
@@ -94,7 +93,7 @@ function Welcome(){
                 </button>
             </div>
         </form>
-        )
-    }
+    )//end of return
+    
 }
 export default Welcome
