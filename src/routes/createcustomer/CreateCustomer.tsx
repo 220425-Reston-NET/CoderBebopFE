@@ -13,10 +13,6 @@ function CreateCustomer() {
     let CusID: number = 0;
     let ConfirmCusID: number = 0;
 
-    const navigate = useNavigate();
-    const goToNewCustInfo = () => {
-        navigate('/newcustinfo');
-    };
 
     function insertName(e: any) {
         CusName = e.target.value;
@@ -55,12 +51,21 @@ function CreateCustomer() {
                     address: CusAddress,
                     email: CusEmail,
                     cAccID: ConfirmCusID
+
+                   
+                    
                 }
             )
+           
         });
 
-
+                    console.log(`${CusID}   ${CusName}    ${CusEmail}`)
     }
+
+    const navigate = useNavigate();
+    const goToNewCustInfo = () => {
+        navigate('/newcustinfo');
+    };
 
 
     return (
@@ -97,10 +102,8 @@ function CreateCustomer() {
                 </div>
                 <div className="col-12 createcustomer-container">
                     <button type="submit" className="btn btn-primary"><div onClick={goToNewCustInfo}>Create Account</div></button>
-                {/* testing */}
                 </div>
             </div>
-
         </form>
     )
 }
