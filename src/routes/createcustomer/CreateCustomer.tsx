@@ -74,26 +74,9 @@ function CreateCustomer() {
 
             console.log(response);
 
-            test();
         });
-        // let responsebody = await reponse.json();
-
-        // console.log(responsebody);
-
-        // setcustomer(responsebody);
     };
 
-    function test() {
-    
-        <div className="form-group col-md-4">
-          <div>Your Account Creation was Successful!</div>;
-          <div>Please use current information to login</div>;
-          <div>Card Number = {customer.cardNumber}</div>;
-          <div>Pin = {customer.pin}</div>;
-          <button type="submit" className="btn btn-primary"> <div onClick={goToNewCustInfo}>Go to Login</div></button>;
-        </div>
-          
-        };
 
 
 
