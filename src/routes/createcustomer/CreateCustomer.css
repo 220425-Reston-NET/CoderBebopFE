@@ -9,3 +9,24 @@
     margin-top: 20px;
     align-items: center;
 }
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://cdn1.psfk.com/wp-content/uploads/2017/02/Screen-Shot-2017-02-23-at-12.52.57-PM.png");
+
+  /* Control the height of the image */
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
