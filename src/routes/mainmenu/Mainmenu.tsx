@@ -17,8 +17,8 @@ function Mainmenu() {
       navigate('/transfer');
   };
     
-  const goToLogin = () => {
-    navigate('/');
+  const goToChooseAccount = () => {
+    navigate('/chooseaccount');
 };
 
   return (
@@ -31,7 +31,7 @@ function Mainmenu() {
       </div>
 
       <div className='container'>
-        <button type="button" className="btn btn-primary btn-lg"><div onClick={goToLogin}>Exit</div></button>
+        <button type="button" className="btn btn-primary btn-lg"><div onClick={goToChooseAccount}>Back</div></button>
       </div>
     </form>
   )

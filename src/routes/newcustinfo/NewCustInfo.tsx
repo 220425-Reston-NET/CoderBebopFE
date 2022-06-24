@@ -12,11 +12,10 @@ function NewCustInfo() {
 
   return (
 
-
     <div className='info-container'>
       <ul className="list-group styling-container">
         <h4>Card Number</h4>
-        <li className="list-group-item styling-container"></li>
+        <li className="list-group-item styling-container">random</li>
         <h4>PIN</h4>
         <li className="list-group-item styling-container">random</li>
       </ul>

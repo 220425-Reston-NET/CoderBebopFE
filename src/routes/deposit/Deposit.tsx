@@ -2,6 +2,27 @@ import React from 'react'
 import './Deposit.css'
 
 function Deposit() {
+
+
+
+
+  function onSubmit(e: any) {
+    e.preventDefault();
+    
+    fetch("http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/Customer/GetAllCustomers?+", {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(
+            {               
+                
+            }
+            )
+        });
+      }
+
   return (
     <div className='deposit-container'>
     <h4>Enter amount you would like to deposit:</h4>
