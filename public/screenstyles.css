@@ -18,7 +18,7 @@ input, select, textarea{
 /* Style for body specifies a background color */
 body {
 	background-color: #368187;
-	font-family: Helvetica;
+	font-family: Helvetica, sans-serif;
 	text-decoration: none;
 	color: #245758;
 }
@@ -81,24 +81,22 @@ article {
 
 
 #container {
-	font-family: Meridien;
+	font-family: Meridien, sans-serif;
 	font-size: 2em;
 	font-weight: bold;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	width: 70%;
 	align-items: center;
 	text-align: center;
 	margin-top: .5em;
 	margin-bottom: -.25em;
 	padding: 0;
-	text-align: center;
 }
 
 /* Style for the header specifies top margin, background color, rounded corners, and center align content */
 header {
-	font-family: Meridien;
+	font-family: Meridien, sans-serif;
 	font-size: .8em;
 	margin-top: 0em;
 	margin-bottom: -1.75em;
@@ -117,7 +115,7 @@ header {
 
 /* Style for nav specifies text properties */
 nav {
-	font-family: Helvetica;
+	font-family: Helvetica, sans-serif;
 	font-size: 1em;
 	font-weight: bold;
 	text-align: center;
@@ -149,7 +147,7 @@ nav li a {
 main {
 	
 	display: block;
-	font-family: helvetica;
+	font-family: helvetica, sans-serif;
 	font-size: 1em;
 	margin-top: 0.2em;
 	padding: 0.5em;
@@ -203,7 +201,7 @@ input, select, textarea{
 }
 
 #container {
-	font-family: Meridien;
+	font-family: Meridien, sans-serif;
 	font-size: 2em;
 	font-weight: bold;
 	width: 70%;
@@ -220,7 +218,7 @@ section{
 }
 
 header {
-	font-family: Meridien;
+	font-family: Meridien, sans-serif;
 	font-size: 1em;
 	margin-top: 0.2em;
 	margin-bottom: -2.3em;
@@ -229,7 +227,6 @@ header {
 	color: #245758; 
 	border: none;
 	border-radius: 3em;
-	margin-top: 1em;
 }
 	
 	
@@ -288,7 +285,7 @@ section{
 
 
 header {
-	font-family: Meridien;
+	font-family: Meridien, sans-serif;
 	font-size: 1em;
 	margin-top: 0.2em;
 	margin-bottom: -2.3em;
@@ -297,7 +294,6 @@ header {
 	color: #245758; 
 	border: none;
 	border-radius: 3em;
-	margin-top: 1em;
 }
 
 
@@ -319,7 +315,7 @@ section article {
 
 /* Style specifies width for container */ 
 #container {
-	font-family: Meridien;
+	font-family: Meridien, sans-serif;
 	font-size: 2.5em;
 	font-weight: bold;
 	width: 70%;
@@ -372,9 +368,9 @@ main {
 
 /* Style specifies a gradient for the body element */ 
 body {
-	background: #368187; /* Firefox */ 
-	background: #368187; /* Opera */ 
-	background: #368187; /* Chrome, Safari */
+	/* background: #368187; /* Firefox */ 
+	/* background: #368187; /* Opera */ 
+	/* background: #368187; /* Chrome, Safari */
 	background: #368187; 
 
 }
