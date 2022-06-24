@@ -39,6 +39,10 @@ export default function SDeposit() {
       }));
   }//end of onSubmit
 
+  function test(){
+    console.log("Deposit Successful!")
+  }
+
   const navigate = useNavigate();
   const goToChooseAccount = () => {
     navigate('/chooseaccount');
@@ -68,7 +72,7 @@ export default function SDeposit() {
           <input type="text" className="form-control" id="inputAddress" onChange={GetCustomerID}/>
         </div>
         <div className="col-12">
-                    <button type="submit" className="btn btn-primary"> <div>Submit</div></button>
+                    <button type="submit" className="btn btn-primary" onClick={test}> <div>Submit</div></button>
                 </div>
       </div>
       <div className="form-group col-md-4" style={{ marginTop: 20 }}>

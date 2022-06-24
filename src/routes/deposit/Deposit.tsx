@@ -9,6 +9,7 @@ function Deposit() {
   let userID: any ;
 
   const [customer, setcustomer] = useState({} as Customer);
+  
 
   function GetBalance(e: any) {
     userBalance = e.target.value;
@@ -41,6 +42,10 @@ function Deposit() {
       }));
   }//end of onSubmit
 
+  function test(){
+    console.log("Deposit Successful!")
+  }
+
   const navigate = useNavigate();
   const goToChooseAccount = () => {
     navigate('/chooseaccount');
@@ -70,7 +75,7 @@ function Deposit() {
           <input type="text" className="form-control" id="inputAddress" onChange={GetCustomerID}/>
         </div>
         <div className="col-12">
-                    <button type="submit" className="btn btn-primary"> <div>Submit</div></button>
+                    <button type="submit" className="btn btn-primary" onClick={test}> <div>Submit</div></button>
                 </div>
       </div>
       <div className="form-group col-md-4" style={{ marginTop: 20 }}>
