@@ -8,9 +8,9 @@ function Welcome(){
     let userCard = "";
     let userPin = "";
 
-    const goToMainMenu = () =>
+    const goToChooseAccount = () =>
     {
-        navigate('/Mainmenu')
+        navigate('/chooseaccount')
     };
 
     const gotToCreateAccount = () => {
@@ -57,7 +57,7 @@ function Welcome(){
               // change/ attached user to user id in db
               setUser((previousData) => users);
       
-              goToMainMenu();
+              goToChooseAccount ();
             });
         }//end of onSubmit
 
@@ -77,7 +77,7 @@ function Welcome(){
                 </div>
                 <div>
                 <button type="submit" className="btn btn-primary topmarg">
-                <div onClick={goToMainMenu}>Sign In</div>
+                <div onClick={goToChooseAccount}>Sign In</div>
                 </button>
                 </div>            
             </div>

@@ -17,15 +17,10 @@ function NewCustInfo() {
 
   return (
 
-
     <div className='info-container'>
       <ul className="list-group styling-container">
         <h4>Card Number</h4>
-
-
-        <div>placeholder = {customer.pin}</div>
-
-        <li className="list-group-item styling-container"></li>
+        <li className="list-group-item styling-container">random</li>
         <h4>PIN</h4>
         <div>placeholder={}</div>
         <li className="list-group-item styling-container">random</li>
