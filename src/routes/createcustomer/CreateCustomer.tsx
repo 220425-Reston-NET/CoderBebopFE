@@ -39,7 +39,7 @@ function CreateCustomer() {
         ConfirmCusID = e.target.value;
     }
 
-
+    
     async function onSubmit(e: any) {
         e.preventDefault();
 
@@ -74,27 +74,9 @@ function CreateCustomer() {
 
             console.log(response);
 
-            test(e);
         });
-        // let responsebody = await reponse.json();
-
-        // console.log(responsebody);
-
-        // setcustomer(responsebody);
     };
 
-    function test(e: any) {
-    
-    <div className="form-group col-md-4">
-      <div>Your Account Creation was Successful!</div>;
-      <div>Please use current information to login</div>;
-      <div>Card Number = {customer.cardNumber}</div>;
-      <div>Pin = {customer.pin}</div>;
-      <button type="submit" className="btn btn-primary"> <div onClick={goToNewCustInfo}>Go to Login</div></button>;
-    </div>
-      
-    };
-    
 
 
 
@@ -130,17 +112,20 @@ function CreateCustomer() {
             </div>
 
             <div className="form-group col-md-4">
-                <label htmlFor="inputID">Customer ID</label>
+                <label htmlFor="inputID">SSN</label>
                 <div>
                     <input type="number" className="form-control" id="inputAddress" placeholder="1" onChange={insertCustID} />
                 </div>
-                <label htmlFor="inputConfirmID">Confirm Customer ID</label>
+                <label htmlFor="inputConfirmID">Confirm SSN</label>
                 <div>
                     <input type="number" className="form-control" id="inputEmail" placeholder="1" onChange={insertConfirmID} />
                 </div>
                 <div className="col-12 createcustomer-container">
                     <button type="submit" className="btn btn-primary"> <div>Create Account</div></button>
                 </div>
+                <div>Once you create an account, please use the given generated values to sign in!</div>
+                <div>Card Number : {customer.cardNumber}</div>
+                <div>Pin : {customer.pin}</div>
                 
             </div>
         </form>
