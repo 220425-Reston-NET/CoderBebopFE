@@ -21,7 +21,7 @@ function CreateCustomer() {
     
     function insertName(e: any) {
         CusName = e.target.value;
-
+        
     }
     function insertPhone(e: any) {
         CusPhone = e.target.value;
