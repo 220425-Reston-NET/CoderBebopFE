@@ -2,15 +2,33 @@ import React from 'react'
 import './Withdraw.css'
 
 function Withdraw() {
+
+
+
+
+
   return (
-    <div className='withdraw-container'>
-    <h4>Enter amount you would like to withdraw:</h4>
-    <div className="input-group mb-3" style={{width: 600, marginTop: 20}}>
-  <span className="input-group-text">$</span>
-  <span className="input-group-text">0.00</span>
-  <input type="text" className="form-control" aria-label="Dollar amount (with dot and two decimal places)"/>
-</div>
-</div>
+    
+     <form className='createcustomer-container' >
+      <h4>Welcome to the Withdraw Page!</h4>
+      <h6>Please insert amount you would like to withdraw</h6>
+            <div className="form-group col-md-4 ">
+                <label htmlFor="inputName">$Withdraw Amount</label>
+                <div>
+                    <input type="text" className="form-control" id="inputAddress" />
+                </div>
+            </div>
+            <div>
+              .
+            </div>
+      <h6>Please enter your SSN to confirm the withdraw</h6>
+            <div className="form-group col-md-4 ">
+                <label htmlFor="inputPhoneNumber">SSN</label>
+                <div>
+                    <input type="text" className="form-control" id="inputAddress" />
+                </div>
+            </div>
+      </form>
   )
 }
 

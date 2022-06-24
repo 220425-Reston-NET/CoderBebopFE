@@ -129,11 +129,11 @@ function CreateCustomer() {
             </div>
 
             <div className="form-group col-md-4">
-                <label htmlFor="inputID">Customer ID</label>
+                <label htmlFor="inputID">SSN</label>
                 <div>
                     <input type="number" className="form-control" id="inputAddress" placeholder="1" onChange={insertCustID} />
                 </div>
-                <label htmlFor="inputConfirmID">Confirm Customer ID</label>
+                <label htmlFor="inputConfirmID">Confirm SSN</label>
                 <div>
                     <input type="number" className="form-control" id="inputEmail" placeholder="1" onChange={insertConfirmID} />
                 </div>
