@@ -1,4 +1,8 @@
 export interface Balance{
-    p_balance: number;
-    p_ID: number;
+    cName : string;
+    cAccID : number;
+    cAccType : string;
+    cAccNumber : number;
+    cAccBalance : number;
+    cAccHistory : null;
 }

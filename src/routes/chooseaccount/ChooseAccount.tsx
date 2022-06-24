@@ -11,13 +11,16 @@ function DepositWithdraw() {
     const goToLogin = () => {
         navigate('/');
     };
+    const GotoSmainmenu = () =>{
+      navigate ('/smainmenu');
+    };
 
   return (
     <form className='chooseaccount'>
       <h1>Which account would you like to access?</h1>
       <div className='container'>
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToMainMenu}>Checking</div></button>
-        <button type="button" className="btn btn-secondary btn-lg rightmarg" disabled><div>Savings</div></button>          
+        <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={GotoSmainmenu}>Savings</div></button>          
         <button type="button" className="btn btn-secondary btn-lg" disabled><div> Money Market</div></button>
       </div>
 

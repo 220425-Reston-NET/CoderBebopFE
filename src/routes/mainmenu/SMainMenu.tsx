@@ -1,16 +1,15 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import './Mainmenu.css'
 
-function Mainmenu() {
+export default function SMainMenu() {
 
   const navigate = useNavigate();
     const goToDeposit = () => {
-        navigate('/deposit');
+        navigate('/sdeposit');
     };
 
     const goToWithdraw = () => {
-        navigate('/withdraw');
+        navigate('/swithdraw');
     };
 
     const goToTransfer = () => {
@@ -40,5 +39,3 @@ function Mainmenu() {
     </form>
   )
 }
-
-export default Mainmenu

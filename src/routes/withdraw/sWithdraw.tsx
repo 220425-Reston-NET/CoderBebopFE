@@ -1,8 +1,7 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./Withdraw.css";
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function Withdraw() {
+export default function SWithdraw() {
   let userBalance: any = 0;
   let userID: any = 0;
 
@@ -20,7 +19,7 @@ function Withdraw() {
     e.preventDefault();
 
     await fetch(
-      "http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/CheckingAccount/Withdraw?" +
+      "http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/SavingsAccount/Withdraw?" +
         new URLSearchParams({
           p_balance: userBalance,
           p_ID: userID,
@@ -46,7 +45,7 @@ function Withdraw() {
 
   return (
     <form className="createcustomer-container" onSubmit={onSubmit}>
-      <h4>Welcome to the Checking Withdraw Page!</h4>
+      <h4>Welcome to the Savings Withdraw Page!</h4>
       <h6>Please insert amount you would like to withdraw</h6>
       <div className="form-group col-md-4 ">
         <label htmlFor="inputName">$Withdraw Amount</label>
@@ -100,5 +99,3 @@ function Withdraw() {
     </form>
   );
 }
-
-export default Withdraw;

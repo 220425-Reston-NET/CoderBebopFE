@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Customer } from '../../models/Customer';
-import './Deposit.css'
 
-function Deposit() {
-
+export default function SDeposit() {
   let userBalance: any;
   let userID: any ;
 
@@ -24,7 +22,7 @@ function Deposit() {
     e.preventDefault();
 
     await fetch(
-      "http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/CheckingAccount/Deposit?" +
+      "http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/SavingsAccount/Deposit?" +
       new URLSearchParams({
         p_balance: userBalance,
         p_ID: userID
@@ -52,7 +50,7 @@ function Deposit() {
 
   return (
     <form className='deposit-container' onSubmit={onSubmit}>
-      <h4>Welcome to the Deposit Page!</h4>
+      <h4>Welcome to the Savings Deposit Page!</h4>
       <h6>Please insert amount you would like to deposit</h6>
       <div className="form-group col-md-4 ">
         <label htmlFor="inputName">Deposit Amount</label>
@@ -82,4 +80,3 @@ function Deposit() {
   )
 }
 
-export default Deposit

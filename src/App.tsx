@@ -9,8 +9,11 @@ import CreateCustomer from './routes/createcustomer/CreateCustomer';
 import ChooseAccount from './routes/chooseaccount/ChooseAccount';
 import Deposit from './routes/deposit/Deposit';
 import Transfer from './routes/transfer/Transfer';
-import NewCustInfo from './routes/newcustinfo/NewCustInfo';
 import Withdraw from './routes/withdraw/Withdraw';
+import ViewBalance from './routes/ViewBalance/ViewBalance';
+import SMainMenu from './routes/mainmenu/SMainMenu';
+import SDeposit from './routes/deposit/sDeposit';
+import SWithdraw from './routes/withdraw/sWithdraw';
 
 function App() {
   return (
@@ -24,7 +27,10 @@ function App() {
       <Route path='/deposit' element={<Deposit/>}/>
       <Route path='/withdraw' element={<Withdraw/>}/>
       <Route path='/transfer' element={<Transfer/>}/>
-      <Route path='/newcustinfo' element={<NewCustInfo/>}/>
+      <Route path='/ViewBalance' element={<ViewBalance/>}/>
+      <Route path='/smainmenu' element={<SMainMenu/>}/>
+      <Route path='/sdeposit' element={<SDeposit/>}/>
+      <Route path='/swithdraw' element={<SWithdraw/>}/>
     </Routes>
     </>
   );
