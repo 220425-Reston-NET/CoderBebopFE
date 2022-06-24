@@ -1,27 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { Customer } from '../../models/Customer';
 import './Deposit.css'
 
 function Deposit() {
 
+    let userBalance : any = 0;
+    let userID : any = 0;
 
+    const [customer, setcustomer] = useState({} as Customer);
 
+    function GetBalance(e: any) {
+      userBalance = e.target.value;
+      console.log(userBalance);
+    }
+  
+    function GetCustomerID(e: any) {
+      userID = e.target.value;
+      console.log(userID);
+    }
 
-  function onSubmit(e: any) {
-    e.preventDefault();
+    async function onSubmit(e: any) {
+      e.preventDefault();
+  
+      await fetch(
+        "http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/Customer/GetAllCustomers?" +
+          new URLSearchParams({
+            p_balance: userBalance,
+            p_ID: userID
+          })
+        
+      )
+        .then((response) => response.ok)
+          .then((response => {
+
+          console.log(response);
+
+          test();
+
+        }));
+    }//end of onSubmit
+
+    function test() {
     
-    fetch("http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/Customer/GetAllCustomers?+", {
-        method: 'PUT',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(
-            {               
-                
-            }
-            )
-        });
-      }
+      <div className="form-group col-md-4">
+        <div>Deposit Successful!</div>;
+        <div>Amount Deposited: {userBalance}</div>;
+        <button type="submit" className="btn btn-primary"> <div onClick={goToLogin}>Go back to Login</div></button>;
+      </div>
+        
+      };
+
+      const navigate = useNavigate();
+    const goToLogin = () => {
+        navigate('/');
+    };
 
   return (
     <div className='deposit-container'>
