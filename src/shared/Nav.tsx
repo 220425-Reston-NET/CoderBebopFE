@@ -18,7 +18,7 @@ function Nav() {
               <Link to="/mainmenu" className="nav-link">Main Menu</Link>
             </li>
             <li className="nav-item">
-              <Link to="/createcustomer" className="nav-link">Create an Account</Link>
+              <Link to="/createcustomer" className="nav-link">Create Account</Link>
             </li>
             <li className="nav-item">
               <Link to="/chooseaccount" className="nav-link">Accounts</Link>

@@ -4,4 +4,11 @@
     flex-flow: column wrap;
     align-items: center;
     margin-top: 150px;
+    background-color: paleturquoise;
+    height: 200vh;
+    width: 200vh;
+}
+
+body{
+  background-color: paleturquoise
 }

@@ -30,3 +30,7 @@ body, html {
   background-size: cover;
   position: relative;
 }
+
+body{
+  background-color: pink
+}

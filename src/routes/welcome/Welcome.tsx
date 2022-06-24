@@ -59,7 +59,6 @@ function Welcome(){
 
      
     return (
-        // <form onSubmit={onSubmit}>
         <form className="welcome-container" onSubmit={onSubmit}>
             <div className="input-container">
             <label htmlFor="inputCardNumber" className='topmarg'><h2>Login</h2></label>

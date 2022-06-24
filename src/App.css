@@ -28,13 +28,113 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Styles for desktop viewport */
+@media only screen and (min-width: 950px) {
+  table, th, td {
+    border: solid 0.1em #245758;
+    border-collapse: collapse;
+    padding: 1em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
   }
-  to {
-    transform: rotate(360deg);
+  input, select, textarea{
+    display: block;
+    margin-bottom: 1em;
   }
-}
-
-
+  
+  
+  section{
+      font-size: inherit;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding: 0;
+      text-align: center;
+  }
+  
+  
+  header {
+    font-family: Meridien;
+    font-size: .5em;
+    margin-top: 0.2em;
+    margin-bottom: -2.3em;
+    text-align: center;
+    padding: 0.2em;
+    color: #245758; 
+    border: none;
+    border-radius: 3em;
+    margin-top: 1em;
+  }
+  
+  section article {
+    margin: 1em;
+    padding: 1em;
+    background-color: #ACB7E6;
+  }
+  
+  #images{
+      text-align: center;
+      align-items:center
+  }
+  
+  #image {
+    float:left;
+  }
+  
+  /* Style specifies width for container */ 
+  #container {
+    font-family: Meridien;
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 70%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Style specifies margin and padding for the unordered list within the nav */
+  nav ul {
+    margin: 0;
+    padding-left: 0.50%;
+    padding-right: 0.50%;
+  }
+  
+  /* Style for navigation list items specifies a border radius, border, margin, width, and padding */ 
+  nav li {
+    background-color:0;
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0; 
+    padding: 0;
+    width:100;   
+  }
+  
+  /* Style for navigation links specifies display and padding */
+  nav li a {
+    display: inline-block;
+    padding: 0 em;
+    font-size: em;
+    
+  }
+  
+  /* Style rules for pseudo-classes */
+  nav li a:link {
+    color: paleturquoise;	
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    color: #B1EFCE;
+    font-size: 1.1em;
+  }
+  
+  /* Style for main specifies border, border radius, box-shadow, and margin */
+  main {
+  
+      text-align: left;
+  }
+  
+  /* Style specifies a gradient for the body element */ 
+  body {
+  } 
+  }
