@@ -28,13 +28,7 @@
     margin-top: 40px;
 }
 
-.welcome-container{
-    height: 100vh;
-    background: linear-gradient(
-        to right,
-        paleturquoise 0%,
-        paleturquoise 50%,
-        pink 50%,
-        pink 100%
-    );
-} 
+
+body{
+    background:paleturquoise;
+}

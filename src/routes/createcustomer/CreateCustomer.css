@@ -1,9 +1,8 @@
 .createcustomer-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10vh;
-    background: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh;
 }
 
 .button{

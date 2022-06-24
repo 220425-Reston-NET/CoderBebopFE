@@ -4,8 +4,5 @@
     flex-direction: column;
     align-items: center;
     margin-top: 150px;
-}
-
-.createcustomer-container{
-    background-color: paleturquoise;
+    background:paleturquoise;
 }

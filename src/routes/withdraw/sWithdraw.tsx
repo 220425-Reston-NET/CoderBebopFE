@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import "./Withdraw.css";
 
 export default function SWithdraw() {
   let userBalance: any = 0;
