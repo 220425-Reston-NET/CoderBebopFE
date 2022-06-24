@@ -35,6 +35,10 @@ function Withdraw() {
       });
   } //end of onSubmit
 
+  function test(){
+    console.log("Withdraw Successful!")
+  }
+
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate("/chooseaccount");
@@ -75,7 +79,7 @@ function Withdraw() {
           <div>
             <br></br>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" onClick={test}>
             {" "}
             <div>Submit</div>
           </button>

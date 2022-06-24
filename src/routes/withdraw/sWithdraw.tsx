@@ -34,6 +34,10 @@ export default function SWithdraw() {
       });
   } //end of onSubmit
 
+  function test(){
+    console.log("Withdraw Successful!")
+  }
+
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate("/chooseaccount");
@@ -74,7 +78,7 @@ export default function SWithdraw() {
           <div>
             <br></br>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" onClick={test}>
             {" "}
             <div>Submit</div>
           </button>

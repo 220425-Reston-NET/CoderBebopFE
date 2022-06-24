@@ -78,8 +78,6 @@ function CreateCustomer() {
     };
 
 
-
-
     const navigate = useNavigate();
     const goToNewCustInfo = () => {
         navigate('/');
