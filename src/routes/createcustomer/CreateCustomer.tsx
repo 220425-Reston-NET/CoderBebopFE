@@ -6,8 +6,6 @@ import {Customer} from '../../models/Customer'
 
 function CreateCustomer() {
 
-   
-
     let CusName: string = '';
     let CusPhone: string = '';
     let CusAddress: string = '';
@@ -85,8 +83,6 @@ function CreateCustomer() {
 
 
     return (
-
-        
         <form className='createcustomer-container' onSubmit={onSubmit}>
             <div className="form-group col-md-4 ">
                 <label htmlFor="inputName">Name</label>

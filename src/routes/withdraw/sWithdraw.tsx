@@ -82,22 +82,15 @@ export default function SWithdraw() {
             {" "}
             <div>Submit</div>
           </button>
-
-          <div className="form-group col-md-4" style={{ marginTop: 20 }}>
-            <div>
-              Thank you for banking with us! What would you like to do next?
-            </div>
-            <button type="submit" className="btn btn-primary">
-              {" "}
-              <div onClick={goToLogin}>Continue Banking</div>
-            </button>
-            <div></div>
+          <div>
             <br></br>
-            <button type="submit" className="btn btn-primary">
-              {" "}
-              <div onClick={LeaveBank}>Exit ATM</div>
-            </button>
           </div>
+
+        <div>
+        <h6>Thank you for banking with us! What would you like to do next?</h6>
+        <button type="submit" className="btn btn-primary" style={{ marginTop: 20 }}> <div onClick={goToLogin}>Continue Banking</div></button>
+        <div><button type="submit" className="btn btn-primary" style={{ marginTop: 20 }}> <div onClick={LeaveBank}>Exit</div></button></div>
+      </div>
         </div>
       </div>
     </form>
