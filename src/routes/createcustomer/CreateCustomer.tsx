@@ -39,7 +39,7 @@ function CreateCustomer() {
         ConfirmCusID = e.target.value;
     }
 
-
+    
     async function onSubmit(e: any) {
         e.preventDefault();
 
@@ -74,7 +74,7 @@ function CreateCustomer() {
 
             console.log(response);
 
-            test(e);
+            test();
         });
         // let responsebody = await reponse.json();
 
@@ -83,18 +83,17 @@ function CreateCustomer() {
         // setcustomer(responsebody);
     };
 
-    function test(e: any) {
+    function test() {
     
-    <div className="form-group col-md-4">
-      <div>Your Account Creation was Successful!</div>;
-      <div>Please use current information to login</div>;
-      <div>Card Number = {customer.cardNumber}</div>;
-      <div>Pin = {customer.pin}</div>;
-      <button type="submit" className="btn btn-primary"> <div onClick={goToNewCustInfo}>Go to Login</div></button>;
-    </div>
-      
-    };
-    
+        <div className="form-group col-md-4">
+          <div>Your Account Creation was Successful!</div>;
+          <div>Please use current information to login</div>;
+          <div>Card Number = {customer.cardNumber}</div>;
+          <div>Pin = {customer.pin}</div>;
+          <button type="submit" className="btn btn-primary"> <div onClick={goToNewCustInfo}>Go to Login</div></button>;
+        </div>
+          
+        };
 
 
 
@@ -141,6 +140,9 @@ function CreateCustomer() {
                 <div className="col-12 createcustomer-container">
                     <button type="submit" className="btn btn-primary"> <div>Create Account</div></button>
                 </div>
+                <div>Once you create an account, please use the given generated values to sign in!</div>
+                <div>Card Number : {customer.cardNumber}</div>
+                <div>Pin : {customer.pin}</div>
                 
             </div>
         </form>
