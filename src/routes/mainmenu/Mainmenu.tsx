@@ -33,7 +33,7 @@ function Mainmenu() {
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToDeposit}>Deposit</div></button>
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToWithdraw}>Withdraw</div></button>
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToViewBalance}>View Balance</div></button>           
-        <button type="button" className="btn btn-secondary btn-lg" disabled><div onClick={goToTransfer}>Transfer</div></button>
+        <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToTransfer}>Transfer</div></button>
       </div>
 
       <div className='container'>
