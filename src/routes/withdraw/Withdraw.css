@@ -1,16 +1,11 @@
-.createcustomer-container{
+.withdraw-container{
     display: flex;
     flex-direction: column;
     flex-flow: column wrap;
     align-items: center;
-    text-align: center;
     margin-top: 150px;
-    background-color: paleturquoise;
-    height: 200vh;
-    width: 200vh;
-    padding: 2rem;
 }
 
-body{
-  background-color: paleturquoise
+.createcustomer-container{
+    background-color: paleturquoise;
 }

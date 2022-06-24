@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Customer } from '../../models/Customer';
 
 function Welcome(){
+
     const navigate = useNavigate();
 
     let userCard : any = 0;
@@ -75,9 +76,7 @@ function Welcome(){
                 <div>Sign In</div>
                 </button>
                 </div>            
-            </div>
-        {/* </form> */}
-                
+            </div>   
           
             <div className='create-container'>
                 <label htmlFor="buttonlabel" className='topmarg'><h2>No Account?</h2></label>

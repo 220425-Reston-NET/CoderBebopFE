@@ -25,6 +25,8 @@ function Mainmenu() {
 };
 
   return (
+    
+    <body>
     <form className='mainmenu'>
       <h1>What would you like to do?</h1>
       <div className='container'>
@@ -38,6 +40,7 @@ function Mainmenu() {
         <button type="button" className="btn btn-primary btn-lg"><div onClick={goToChooseAccount}>Back</div></button>
       </div>
     </form>
+    </body>
   )
 }
 
