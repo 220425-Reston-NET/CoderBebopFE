@@ -109,23 +109,25 @@ function Transfer(){
     
 
     return (
-    <div className="transfer-container">
-        <h3>Welcome to the Transfer Page!</h3>
-        <div>
+    <div className="transfer-container"style ={{marginTop:'0rem'}}>
+        <h3><b>Welcome to the Transfer Page!</b></h3>
+        <div> 
             <br></br>
         </div>
-        <h5>Please choose the amount you want to transfer:</h5>
+        <div style ={{marginTop:'-1.5rem'}}>
+        <h5><b>Please choose the amount you want to transfer:</b></h5>
+        </div>
+        <div>
+            <label htmlFor="inputAddress"> </label>
+            <input type="text" className="form-control" id="inputAddress" placeholder="$$$" onChange={GetBalance} style ={{marginTop:'-1.5rem'}}/>
+        </div>
+        <h5><b>Please enter your SSN to confirm transfer:</b></h5>
         <div>
             <label htmlFor="inputAddress"></label>
-            <input type="text" className="form-control" id="inputAddress" placeholder="$$$" onChange={GetBalance} />
+            <input type="text" className="form-control" id="inputAddress"  onChange={GetCustomerID} style ={{marginTop:'-1.5rem'}}/>
         </div>
-        <h5>Please enter your SSN to confirm transfer:</h5>
-        <div>
-            <label htmlFor="inputAddress"></label>
-            <input type="text" className="form-control" id="inputAddress"  onChange={GetCustomerID} />
-        </div>
-        <h5>Please choose the account you are withdrawing from:</h5>
-        <div className="form-check form-check-inline" style={{marginTop: 10}}>
+        <h5><b>Please choose the account you are withdrawing from:</b></h5>
+        <div className="form-check form-check-inline" style={{marginTop: '0rem'}}>
             <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onChange={onSubmitcw}/>
             <label className="form-check-label" htmlFor="inlineRadio1">Checking</label>
         </div>
@@ -137,8 +139,10 @@ function Transfer(){
             <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"/>
             <label className="form-check-label" htmlFor="inlineRadio3">Money Market</label>
         </div>
-        <h5>Please choose the account you are depositing to:</h5>
-        <div className="form-check form-check-inline" style={{marginTop: 10}}>
+        <div style ={{marginTop:'-1rem'}}></div>
+        <h5><b>Please choose the account you are depositing to:</b></h5>
+      
+        <div className="form-check form-check-inline" style={{marginTop: '0rem'}}>
             <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1" onChange={onSubmitcd}/>
             <label className="form-check-label" htmlFor="inlineRadio1">Checking</label>
         </div>
@@ -151,7 +155,8 @@ function Transfer(){
             <label className="form-check-label" htmlFor="inlineRadio3">Money Market</label>
         </div>
         <div>
-        <h6>Thank you for banking with us! What would you like to do next?</h6>
+        <div style ={{marginTop:'-1rem'}}></div>
+        <h6>"Thank you for banking with us! What would you like to do next?"</h6>
         <button type="submit" className="btn btn-primary" style={{ marginTop: 20 }}> <div onClick={goToLogin}>Continue Banking</div></button>
         <div><button type="submit" className="btn btn-primary" style={{ marginTop: 20 }}> <div onClick={LeaveBank}>Exit</div></button></div>
       </div>
