@@ -15,19 +15,7 @@ function Nav() {
               <Link to="/" className="nav-link">Welcome</Link>
             </li>
             <li className="nav-item">
-              <Link to="/mainmenu" className="nav-link">Main Menu</Link>
-            </li>
-            <li className="nav-item">
               <Link to="/createcustomer" className="nav-link">Create an Account</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/chooseaccount" className="nav-link">Accounts</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/deposit" className="nav-link">Deposit</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/withdraw" className="nav-link">Withdraw</Link>
             </li>
             <li className="nav-item">
               <Link to="/transfer" className="nav-link">Transfer</Link>
