@@ -69,30 +69,31 @@ function Welcome(){
     return (
         <form className="welcome-container" onSubmit={onSubmit}>
             <div className="input-container">
-            <label htmlFor="inputCardNumber" className='topmarg'><h2>Login</h2></label>
-                <div>
+            <label htmlFor="inputCardNumber" className='topmarg'><h2><b>Login</b></h2></label>
+                <div style ={{marginTop:'-2rem'}}>
                 <label htmlFor="loginlabel" className='topmarg'>Card Number</label>
-                <input type="text" className="form-control" id="inputCardNumber" aria-describedby="" placeholder="" required onChange={GetCustomerCard} />
+                <input type="text" className="form-control" id="inputCardNumber" aria-describedby="" placeholder="" required onChange={GetCustomerCard} style ={{marginTop:'0rem'}}/>
                 </div>
-                <div>
+                <div style ={{marginTop:'-3rem'}}>
                 <label htmlFor="inputPIN" className='topmarg'>PIN</label>
-                <input type="password" className="form-control" id="inputPIN" placeholder="" required onChange={GetCustomerPin}/>
+
+                <input type="password" className="form-control" id="inputPIN" placeholder="" required onChange={GetCustomerPin} style ={{marginTop:'0rem'}}/>
                 {
                   isfailed && <span style={{color : 'red'}}>User was not found</span>
                 }
                 </div>
                 <div>
-                <button type="submit" className="btn btn-primary topmarg">
+                <button type="submit" className="btn btn-primary topmarg" style ={{marginTop:'0rem'}}>
                 <div>Sign In</div>
                 </button>
                 </div>            
             </div>   
           
             <div className='create-container'>
-                <label htmlFor="buttonlabel" className='topmarg'><h2>No Account?</h2></label>
+                <label htmlFor="buttonlabel" className='topmarg'><h2><b>No Account?</b></h2></label>
                 <br></br>
                 <br></br>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary"style ={{marginTop:'-1rem'}}>
                 <div onClick={gotToCreateAccount}>Create</div>
                 </button>
             </div>

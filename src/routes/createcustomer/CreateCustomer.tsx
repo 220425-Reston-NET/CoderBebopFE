@@ -85,42 +85,43 @@ function CreateCustomer() {
     return (
         <form className='createcustomer-container' onSubmit={onSubmit}>
             <div className="form-group col-md-4 ">
-                <label htmlFor="inputName">Name</label>
+                <label htmlFor="inputName"><b>Name</b></label>
                 <div>
                     <input type="text" className="form-control" id="inputAddress" placeholder="John Doe" onChange={insertName} />
                 </div>
             </div>
             <div className="form-group col-md-4 ">
-                <label htmlFor="inputPhoneNumber">Phone Number</label>
+                <label htmlFor="inputPhoneNumber"><b>Phone Number</b></label>
                 <div>
                     <input type="text" className="form-control" id="inputAddress" placeholder="1234567890" onChange={insertPhone} />
                 </div>
             </div>
             <div className="form-group col-md-4">
-                <label htmlFor="inputAddress">Address</label>
+                <label htmlFor="inputAddress"><b>Address</b></label>
                 <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" onChange={insertAddress} />
-                <label htmlFor="inputEmail">Email</label>
+                <label htmlFor="inputEmail"><b>Email</b></label>
                 <div>
                     <input type="text" className="form-control" id="inputEmail" placeholder="johndoe@ymail.com" onChange={insertEmail} />
                 </div>
             </div>
 
             <div className="form-group col-md-4">
-                <label htmlFor="inputID">SSN</label>
+                <label htmlFor="inputID"><b>SSN</b></label>
                 <div>
                     <input type="number" className="form-control" id="inputAddress" placeholder="1" onChange={insertCustID} />
                 </div>
-                <label htmlFor="inputConfirmID">Confirm SSN</label>
+                <label htmlFor="inputConfirmID"><b>Confirm SSN</b></label>
                 <div>
                     <input type="number" className="form-control" id="inputEmail" placeholder="1" onChange={insertConfirmID} />
                 </div>
-                <div className="col-12 createcustomer-container">
-                    <button type="submit" className="btn btn-primary"> <div>Create Account</div></button>
+                <div className="col-12 createcustomer-container" style ={{marginTop:'-4rem'}}>
+                    <button type="submit" className="btn btn-primary"> <div>Create Account </div> </button>
                 </div>
-                <div>Once you create an account, please use the given generated values to sign in!</div>
-                <div>Card Number : {customer.cardNumber}</div>
-                <div>Pin : {customer.pin}</div>
-                
+                <div style ={{marginTop:'-5rem'}}>
+                <div><b>Once you create an account, please use the given generated values to sign in!</b></div>
+                <div><b>Card Number : </b>{customer.cardNumber}</div>
+                <div><b>Pin : </b>{customer.pin}</div>
+                </div>
             </div>
         </form>
     )
