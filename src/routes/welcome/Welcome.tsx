@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Welcome.css'
 import { useNavigate } from 'react-router-dom';
 import { Customer } from '../../models/Customer';
+import { isArrowFunction } from 'typescript';
 
 function Welcome(){
 
@@ -24,6 +25,7 @@ function Welcome(){
         // make a function if loging info matches are user in db = welcome page else
         // user not found message display.
         const [users, setUser] = useState({} as Customer);
+        const [isfailed, setfailed] = useState(false);
     
     
         function GetCustomerCard(e: any) {
@@ -54,8 +56,13 @@ function Welcome(){
 
               console.log(response);
       
-              goToChooseAccount ();
-            }));
+              setfailed((prev) => false);
+            }), () => {
+
+                setfailed((prev) => true);
+            }
+            
+            );
         }//end of onSubmit
 
      
@@ -70,6 +77,9 @@ function Welcome(){
                 <div>
                 <label htmlFor="inputPIN" className='topmarg'>PIN</label>
                 <input type="password" className="form-control" id="inputPIN" placeholder="" required onChange={GetCustomerPin}/>
+                {
+                  isfailed && <span style={{color : 'red'}}>User was not found</span>
+                }
                 </div>
                 <div>
                 <button type="submit" className="btn btn-primary topmarg">
