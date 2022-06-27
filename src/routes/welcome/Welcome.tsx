@@ -72,7 +72,7 @@ function Welcome(){
             <label htmlFor="inputCardNumber" className='topmarg'><h2><b>Login</b></h2></label>
                 <div style ={{marginTop:'-2rem'}}>
                 <label htmlFor="loginlabel" className='topmarg'>Card Number</label>
-                <input type="text" className="form-control" id="inputCardNumber" aria-describedby="" placeholder="" required onChange={GetCustomerCard} style ={{marginTop:'0rem'}}/>
+                <input type="text" className="form-control" id="inputCardNumber" placeholder="" required onChange={GetCustomerCard} style ={{marginTop:'0rem'}}/>
                 </div>
                 <div style ={{marginTop:'-3rem'}}>
                 <label htmlFor="inputPIN" className='topmarg'>PIN</label>

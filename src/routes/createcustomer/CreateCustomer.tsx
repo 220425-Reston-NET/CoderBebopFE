@@ -2,39 +2,47 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './CreateCustomer.css'
 import {Customer} from '../../models/Customer'
+import SuccessCustomer from './SuccessCustomer';
 
 
 function CreateCustomer() {
 
-    let CusName: string = '';
-    let CusPhone: string = '';
-    let CusAddress: string = '';
-    let CusEmail: string = '';
-    let CusID: number = 0;
-    let ConfirmCusID: number = 0;
-    let CardNumber : number;
-    let Pin : number;
+    let CusDefault:Customer = {
+        custID : 0,
+        name : "",
+        phone : "1234567890",
+        address : "",
+        email : "",
+        cardNumber : 1234567890123456,
+        pin : 1001,
+        pinID : 0,
+        cAccID : 0,
+        sAccID : 0,
+        mAccID : 0,
+    };
 
+    const [cusOBJ, setcusOBJ] = useState(CusDefault);
     const [customer, setcustomer] = useState({} as Customer);
+    const [ishidden, sethidden] = useState(false);
     
     function insertName(e: any) {
-        CusName = e.target.value;
+        CusDefault.name = e.target.value;
         
     }
     function insertPhone(e: any) {
-        CusPhone = e.target.value;
+        CusDefault.phone = e.target.value;
     }
     function insertAddress(e: any) {
-        CusAddress = e.target.value;
+        CusDefault.address = e.target.value;
     }
     function insertEmail(e: any) {
-        CusEmail = e.target.value;
+        CusDefault.email = e.target.value;
     }
     function insertCustID(e: any) {
-        CusID = e.target.value;
+        CusDefault.custID = e.target.value;
     }
     function insertConfirmID(e: any) {
-        ConfirmCusID = e.target.value;
+        CusDefault.cAccID = e.target.value;
     }
 
     
@@ -49,14 +57,12 @@ function CreateCustomer() {
             },
             body: JSON.stringify(
                 {
-                    custID: CusID,
-                    name: CusName,
-                    phone: CusPhone,
-                    address: CusAddress,
-                    email: CusEmail,
-                    cAccID: ConfirmCusID,
-                    cardNumber: CardNumber,
-                    pin: Pin
+                    custID: cusOBJ.custID,
+                    name: cusOBJ.name,
+                    phone: cusOBJ.phone,
+                    address: cusOBJ.address,
+                    email: cusOBJ.email,
+                    cAccID: cusOBJ.cAccID
 
                    
                     
@@ -66,23 +72,27 @@ function CreateCustomer() {
         
            
         }).then(response => response.json())
-            .then(response => {
+            .then((customer:Customer) => {
             
-            setcustomer(response);  
+            console.log(customer);    
+              
+            setcusOBJ((prev) => customer);
 
-            console.log(response);
 
+            sethidden((prev) => true);
+
+        }, () => {
+
+            sethidden((prev) => false);
         });
     };
 
 
-    const navigate = useNavigate();
-    const goToNewCustInfo = () => {
-        navigate('/');
-    };
+
 
 
     return (
+        <div>
         <form className='createcustomer-container' onSubmit={onSubmit}>
             <div className="form-group col-md-4 ">
                 <label htmlFor="inputName"><b>Name</b></label>
@@ -118,12 +128,17 @@ function CreateCustomer() {
                     <button type="submit" className="btn btn-primary"> <div>Create Account </div> </button>
                 </div>
                 <div style ={{marginTop:'-5rem'}}>
-                <div><b>Once you create an account, please use the given generated values to sign in!</b></div>
+                {/* <div><b>Once you create an account, please use the given generated values to sign in!</b></div>
                 <div><b>Card Number : </b>{customer.cardNumber}</div>
-                <div><b>Pin : </b>{customer.pin}</div>
+                <div><b>Pin : </b>{customer.pin}</div> */}
                 </div>
             </div>
         </form>
+        {
+            ishidden &&
+            <SuccessCustomer {...cusOBJ} ></SuccessCustomer>
+        }
+        </div>
     )
 }
 
