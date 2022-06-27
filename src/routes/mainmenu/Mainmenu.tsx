@@ -28,7 +28,7 @@ function Mainmenu() {
     
     <body>
     <form className='mainmenu'>
-      <h1>What would you like to do?</h1>
+      <h1><b>What would you like to do?</b></h1>
       <div className='container'>
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToDeposit}>Deposit</div></button>
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToWithdraw}>Withdraw</div></button>

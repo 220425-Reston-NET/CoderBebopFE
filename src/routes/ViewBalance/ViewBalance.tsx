@@ -48,10 +48,11 @@ function ViewBalance() {
 
   return (
     <form className="createcustomer-container" onSubmit={onSubmit}>
-      <h4>Welcome to the View Balance Page!</h4>
+      <div className="transfer-container"style ={{marginTop:'-4rem'}}></div>
+      <h4><b>Welcome to the View Balance Page!</b></h4>
       <h6>Please insert your SSN to get your balance</h6>
       <div className="form-group col-md-4 ">
-        <label htmlFor="inputName">SSN</label>
+        <label htmlFor="inputName"><b>SSN</b></label>
         <div>
           <input
             type="text"
@@ -75,11 +76,12 @@ function ViewBalance() {
             <div>
               Thank you for banking with us! What would you like to do next?
             </div>
+            <div className="transfer-container"style ={{marginTop:'.5rem'}}></div>
             <button type="submit" className="btn btn-primary">
               {" "}
-              <div onClick={goToLogin}>Continue Banking</div>
+              <div onClick={goToLogin}>Continue Banking </div>
             </button>
-            <div></div>
+            <div className="transfer-container"style ={{marginTop:'.5rem'}}></div>
             <br></br>
             <button type="submit" className="btn btn-primary">
               {" "}

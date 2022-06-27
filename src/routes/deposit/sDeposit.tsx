@@ -54,10 +54,11 @@ export default function SDeposit() {
 
   return (
     <form className='deposit-container' onSubmit={onSubmit}>
-      <h4>Welcome to the Savings Deposit Page!</h4>
+      <div className="transfer-container"style ={{marginTop:'-7rem'}}></div>
+      <h4><b>Welcome to the Savings Deposit Page!</b></h4>
       <h6>Please insert amount you would like to deposit</h6>
       <div className="form-group col-md-4 ">
-        <label htmlFor="inputName">Deposit Amount</label>
+        <label htmlFor="inputName"><b>Deposit Amount</b></label>
         <div>
           <input type="text" className="form-control" id="inputAddress" onChange={GetBalance}/>
         </div>
@@ -67,7 +68,7 @@ export default function SDeposit() {
       </div>
       <h6>Please enter your SSN to confirm the deposit</h6>
       <div className="form-group col-md-4 ">
-        <label htmlFor="inputPhoneNumber">SSN</label>
+        <label htmlFor="inputPhoneNumber"><b>SSN</b></label>
         <div style={{marginBottom:20}}>
           <input type="text" className="form-control" id="inputAddress" onChange={GetCustomerID}/>
         </div>
