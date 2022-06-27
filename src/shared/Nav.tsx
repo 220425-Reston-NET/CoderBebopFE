@@ -11,15 +11,7 @@ function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">Welcome</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/createcustomer" className="nav-link">Create Account</Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/transfer" className="nav-link">Transfer</Link>
-            </li>
++
           </ul>
         </div>
       </div>
