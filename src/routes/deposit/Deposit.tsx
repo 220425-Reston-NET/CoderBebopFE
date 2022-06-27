@@ -9,6 +9,7 @@ function Deposit() {
   let userID: any ;
 
   const [isHidden, setHidden] = useState(false);
+  const [isSuccess, setSuccess] = useState(false);
   
 
   function GetBalance(e: any) {
@@ -53,6 +54,8 @@ function Deposit() {
       .then((response) => response.ok)
       .then((response => {
 
+        setSuccess(true)
+
         console.log(response);
       }));
   }//end of onSubmit
@@ -71,6 +74,7 @@ function Deposit() {
   };
 
   return (
+    <div>
     <form className='deposit-container' onSubmit={onSubmit}>
       <div className="transfer-container"style ={{marginTop:'-7rem'}}></div>
       <h4><b>Welcome to the Checking Deposit Page!</b></h4>
@@ -100,12 +104,18 @@ function Deposit() {
                     <button type="submit" className="btn btn-primary" onClick={test} disabled={isHidden}> <div>Submit</div></button>
                 </div>
       </div>
-      <div className="form-group col-md-4" style={{ marginTop: 20 }}>
-        <h6>Thank you for banking with us. What would you like to do next?</h6>
+      
+    </form>
+    {
+      isSuccess &&
+      <div className="transfer-container" style ={{marginTop:'2rem'}}>
+        <h4>Your Deposit was successful! Check your balance for confirmation of deposit</h4>
+        <h5>Thank you for banking with us. What would you like to do next?</h5>
         <button type="submit" className="btn btn-primary" style={{ marginTop: 20 }}> <div onClick={goToChooseAccount}>Continue Banking</div></button>
         <div><button type="submit" className="btn btn-primary" style={{ marginTop: 20 }}> <div onClick={goToLogin}>Exit</div></button></div>
       </div>
-    </form>
+    }
+    </div>
   )
 }
 

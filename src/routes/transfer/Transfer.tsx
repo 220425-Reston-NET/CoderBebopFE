@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import './Transfer.css'
 
@@ -7,14 +7,33 @@ function Transfer(){
     let userBalance: any = 0;
   let userID: any = 0;
 
+  const [isHidden, setHidden] = useState(false);
+  const [isSuccess, setSuccess] = useState(false);
+  const [isSuccess1, setSuccess1] = useState(false);
+
   function GetBalance(e: any) {
     userBalance = e.target.value;
     console.log(userBalance);
+    if(userBalance<0)
+    {
+      setHidden(true);
+    }
+    else
+    {
+      setHidden(false);
+    }
   }
 
   function GetCustomerID(e: any) {
     userID = e.target.value;
     console.log(userID);
+    if(userID<0)
+    {
+      setHidden(true)
+    }
+    else{
+      setHidden(false)
+    }
   }
 
     async function onSubmitsw(e: any) {
@@ -33,6 +52,7 @@ function Transfer(){
           .then((response) => response.ok)
           .then((response) => {
             console.log(response);
+            setSuccess(true)
           });
       } //end of onSubmit
 
@@ -52,6 +72,7 @@ function Transfer(){
           .then((response) => response.ok)
           .then((response) => {
             console.log(response);
+            setSuccess(true)
           });
       } //end of onSubmit
 
@@ -73,6 +94,7 @@ function Transfer(){
           .then((response => {
     
             console.log(response);
+            setSuccess1(true)
           }));
       }//end of onSubmit
 
@@ -94,6 +116,7 @@ function Transfer(){
           .then((response => {
     
             console.log(response);
+            setSuccess1(true)
           }));
       }//end of onSubmit
 
@@ -119,20 +142,30 @@ function Transfer(){
         </div>
         <div>
             <label htmlFor="inputAddress"> </label>
-            <input type="text" className="form-control" id="inputAddress" placeholder="$$$" onChange={GetBalance} style ={{marginTop:'-1.5rem'}}/>
+            <input type="number" className="form-control" id="inputAddress" placeholder="$$$" onChange={GetBalance} style ={{marginTop:'-1.5rem'}}/>
+            {
+              isHidden && <span style={{color:'red'}}>Cannot input negative money</span>
+            }
         </div>
         <h5><b>Please enter your SSN to confirm transfer:</b></h5>
         <div>
             <label htmlFor="inputAddress"></label>
-            <input type="text" className="form-control" id="inputAddress"  onChange={GetCustomerID} style ={{marginTop:'-1.5rem'}}/>
+            <input type="number" className="form-control" id="inputAddress"  onChange={GetCustomerID} style ={{marginTop:'-1.5rem'}}/>
+            {
+              isHidden && <span style={{color:'red'}}>Cannot input negative money</span>
+            }
         </div>
         <h5><b>Please choose the account you are withdrawing from:</b></h5>
         <div className="form-check form-check-inline" style={{marginTop: '0rem'}}>
             <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" onChange={onSubmitcw}/>
+            {
+              isSuccess && <span>Your Withdraw was recorded! Please select which account to deposit from</span>
+            }
             <label className="form-check-label" htmlFor="inlineRadio1">Checking</label>
         </div>
         <div className="form-check form-check-inline">
             <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" onChange={onSubmitsw}/>
+
             <label className="form-check-label" htmlFor="inlineRadio2">Savings</label>
         </div>
         <div className="form-check form-check-inline" style={{marginBottom: 20}}>
@@ -148,6 +181,9 @@ function Transfer(){
         </div>
         <div className="form-check form-check-inline">
             <input className="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2" onChange={onSubmitsd}/>
+            {
+              isSuccess1 && <span>Your transfer to Savings</span>
+            }
             <label className="form-check-label" htmlFor="inlineRadio2">Savings</label>
         </div>
         <div className="form-check form-check-inline" style={{marginBottom: 20}}>

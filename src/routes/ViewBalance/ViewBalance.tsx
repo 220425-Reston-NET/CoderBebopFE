@@ -92,7 +92,7 @@ function ViewBalance() {
           Account Type : {balance.cAccType}
           </div>
             <div>
-                Balance : {balance.cAccBalance}
+                Balance : ${balance.cAccBalance}
           </div>
             <div>
               Thank you for banking with us! What would you like to do next?

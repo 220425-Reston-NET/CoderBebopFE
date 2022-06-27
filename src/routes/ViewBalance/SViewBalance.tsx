@@ -95,7 +95,7 @@ function SViewBalance() {
         </div>
             Account Type : {balance.sAccType}
             <div>
-                Balance : {balance.sAccBalance}
+                Balance : ${balance.sAccBalance}
       </div>
             <div>
               Thank you for banking with us! What would you like to do next?
