@@ -1,24 +1,26 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { Balance } from '../../models/Balance';
+import { SBalance } from '../../models/SBalance';
 
-function ViewBalance() {
+function SViewBalance() {
 
-    let CaccID : any = 0;
 
-    const [balance, setbalance ] = useState({} as Balance);
+    const [balance, setbalance ] = useState({} as SBalance);
+
     const [isHidden, setHidden] = useState(false);
     const [isSuccess, setSuccess] = useState(false);
 
     function getID(e:any)
     {
-        CaccID = e.target.value
-        if(CaccID<0)
+        balance.sAccID = e.target.value
+
+        if (balance.sAccID < 0)
         {
-          setHidden(true)
+            setHidden(true);
         }
-        else{
-          setHidden(false)
+        else
+        {
+            setHidden(false);
         }
     }
 
@@ -26,9 +28,9 @@ function ViewBalance() {
         e.preventDefault();
     
         await fetch(
-          "http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/CheckingAccount/ViewBalance?" +
+          "http://codebebopp2project-env.eba-ag3aw5vp.us-east-1.elasticbeanstalk.com/api/SavingsAccount/ViewBalance?" +
             new URLSearchParams({
-              c_ID: CaccID
+              c_ID: balance.sAccID+""
               
             })
           
@@ -37,7 +39,7 @@ function ViewBalance() {
             .then((response => {
             // change/ attached user to user id in db
             setbalance(response);
-            setSuccess(true)
+            setSuccess(true);
 
             console.log(response);
     
@@ -60,13 +62,14 @@ function ViewBalance() {
     <div>
     <form className="createcustomer-container" onSubmit={onSubmit}>
       <div className="transfer-container"style ={{marginTop:'-4rem'}}></div>
-      <h4><b>Welcome to the Checking View Balance Page!</b></h4>
+      <h4><b>Welcome to the Savings View Balance Page!</b></h4>
       <h6>Please insert your SSN to get your balance</h6>
       <div className="form-group col-md-4 ">
         <label htmlFor="inputName"><b>SSN</b></label>
         <div>
           <input
-            type="text"
+            type="number"
+            min='0'
             className="form-control"
             id="inputAddress"
             onChange={getID}
@@ -75,7 +78,7 @@ function ViewBalance() {
             isHidden && <span style={{color:'red'}}>Cannot Input negative SSN</span>
           }
         </div>
-        <button type="submit" className="btn btn-primary" disabled ={isHidden}>
+        <button type="submit" className="btn btn-primary" disabled={isHidden}>
             {" "}
             <div>Submit</div>
           </button>
@@ -83,17 +86,17 @@ function ViewBalance() {
       </form>
       {
         isSuccess &&
-        <div className="transfer-container" style ={{marginTop:'-2rem'}}
-        >
-          <h6>User Found! Displaying account information.</h6>
-        Name : {balance.cName}
-          <div>
-
-          Account Type : {balance.cAccType}
-          </div>
+        <div className="transfer-container" style ={{marginTop:'-2rem'}}>
             <div>
-                Balance : {balance.cAccBalance}
-          </div>
+                <h6>User Found! Displaying account information</h6>
+            </div>
+      <div>
+        Name : {balance.sName}
+        </div>
+            Account Type : {balance.sAccType}
+            <div>
+                Balance : {balance.sAccBalance}
+      </div>
             <div>
               Thank you for banking with us! What would you like to do next?
             </div>
@@ -109,9 +112,12 @@ function ViewBalance() {
               <div onClick={LeaveBank}>Exit ATM</div>
             </button>
             </div>
-      }
+        }
       </div>
   )
+
+
+ 
 }
 
-export default ViewBalance
+export default SViewBalance

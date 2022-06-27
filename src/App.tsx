@@ -15,6 +15,7 @@ import SMainMenu from './routes/mainmenu/SMainMenu';
 import SDeposit from './routes/deposit/sDeposit';
 import SWithdraw from './routes/withdraw/sWithdraw';
 import OrderHistory from './routes/orderhistory/OrderHIstory';
+import SViewBalance from './routes/ViewBalance/SViewBalance';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Route path='/smainmenu' element={<SMainMenu/>}/>
       <Route path='/sdeposit' element={<SDeposit/>}/>
       <Route path='/swithdraw' element={<SWithdraw/>}/>
+      <Route path='/sViewBalance' element={<SViewBalance/>}/>
       <Route path='/orderhistory' element={<OrderHistory/>}/>
     </Routes>
     </>

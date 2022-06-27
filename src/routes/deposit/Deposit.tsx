@@ -8,17 +8,32 @@ function Deposit() {
   let userBalance: any;
   let userID: any ;
 
-  const [customer, setcustomer] = useState({} as Customer);
+  const [isHidden, setHidden] = useState(false);
   
 
   function GetBalance(e: any) {
     userBalance = e.target.value;
     console.log(userBalance);
+    if(userBalance<0)
+    {
+      setHidden(true);
+    }
+    else
+    {
+      setHidden(false);
+    }
   }
 
   function GetCustomerID(e: any) {
     userID = e.target.value;
     console.log(userID);
+    if(userID<0)
+    {
+      setHidden(true)
+    }
+    else{
+      setHidden(false)
+    }
   }
 
   async function onSubmit(e: any) {
@@ -58,12 +73,15 @@ function Deposit() {
   return (
     <form className='deposit-container' onSubmit={onSubmit}>
       <div className="transfer-container"style ={{marginTop:'-7rem'}}></div>
-      <h4><b>Welcome to the Deposit Page!</b></h4>
+      <h4><b>Welcome to the Checking Deposit Page!</b></h4>
       <h6>Please insert amount you would like to deposit:</h6>
       <div className="form-group col-md-4 ">
         <label htmlFor="inputName"><b>Deposit Amount</b></label>
         <div>
           <input type="text" className="form-control" id="inputAddress" onChange={GetBalance}/>
+          {
+            isHidden && <span style={{color:'red'}}>Cannot input negative money</span>
+          }
         </div>
       </div>
       <div>
@@ -74,9 +92,12 @@ function Deposit() {
         <label htmlFor="inputPhoneNumber"><b>SSN</b></label>
         <div style={{marginBottom:20}}>
           <input type="text" className="form-control" id="inputAddress" onChange={GetCustomerID}/>
+          {
+            isHidden && <span style={{color:'red'}}>Cannot input negative SSN</span>
+          }
         </div>
         <div className="col-12">
-                    <button type="submit" className="btn btn-primary" onClick={test}> <div>Submit</div></button>
+                    <button type="submit" className="btn btn-primary" onClick={test} disabled={isHidden}> <div>Submit</div></button>
                 </div>
       </div>
       <div className="form-group col-md-4" style={{ marginTop: 20 }}>

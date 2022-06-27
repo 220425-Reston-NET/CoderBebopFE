@@ -16,7 +16,7 @@ export default function SMainMenu() {
       navigate('/transfer');
   };
   const goToViewBalance = () => {
-      navigate('/ViewBalance');
+      navigate('/sViewBalance');
   };
     
   const goToChooseAccount = () => {

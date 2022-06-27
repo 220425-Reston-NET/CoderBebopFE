@@ -55,6 +55,8 @@ function Welcome(){
               setUser(response);
 
               console.log(response);
+
+              goToChooseAccount();
       
               setfailed((prev) => false);
             }), () => {
