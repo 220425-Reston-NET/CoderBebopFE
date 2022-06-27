@@ -69,7 +69,12 @@ function Welcome(){
 
      
     return (
+      <body>
         <form className="welcome-container" onSubmit={onSubmit}>
+          <div style ={{marginTop:'2rem'}}></div>
+        <h1><b>Welcome to Coder Bebop ATM &reg; </b></h1>
+        <h3>The future of ATM banking</h3>
+        <div style ={{marginTop:'-8rem'}}></div>
             <div className="input-container">
             <label htmlFor="inputCardNumber" className='topmarg'><h2><b>Login</b></h2></label>
                 <div style ={{marginTop:'-2rem'}}>
@@ -99,6 +104,7 @@ function Welcome(){
                 </button>
             </div>
         </form>
+        </body>
     )//end of return
     
 }
