@@ -76,7 +76,6 @@ function Welcome(){
                 </div>
                 <div style ={{marginTop:'-3rem'}}>
                 <label htmlFor="inputPIN" className='topmarg'>PIN</label>
-
                 <input type="password" className="form-control" id="inputPIN" placeholder="" required onChange={GetCustomerPin} style ={{marginTop:'0rem'}}/>
                 {
                   isfailed && <span style={{color : 'red'}}>User was not found</span>
