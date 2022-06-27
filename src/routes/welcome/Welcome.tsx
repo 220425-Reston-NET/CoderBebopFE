@@ -94,7 +94,7 @@ function Welcome(){
                 <label htmlFor="buttonlabel" className='topmarg'><h2><b>No Account?</b></h2></label>
                 <br></br>
                 <br></br>
-                <button type="submit" className="btn btn-primary"style ={{marginTop:'-1rem'}}>
+                <button data-testid="create-btn" type="submit" className="btn btn-primary"style ={{marginTop:'-1rem'}}>
                 <div onClick={gotToCreateAccount}>Create</div>
                 </button>
             </div>

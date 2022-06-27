@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import react from 'react'
 import { MemoryRouter } from 'react-router-dom';
 import Welcome from '../routes/welcome/Welcome';
@@ -16,13 +16,16 @@ import Welcome from '../routes/welcome/Welcome';
                 - getPlaceholderText() : by input placeholder values
 */
 
-/*
 
-test("What you are testing"), () => {
-    render(<MemoryRouter>)
-    let :HTMLElement[] = screen.getAllByText();
-    expect().;
+
+test("Checks buttons are in document:", () => {
+    render(<MemoryRouter><Welcome/></MemoryRouter>);
+
+    let createBtn = screen.getByTestId("create-btn")
+
+    expect(createBtn).toBeInTheDocument();
+    //fireEvent triggers a specific event to happen on an element:
+    fireEvent.click(createBtn);
 
 });
 
-*/

@@ -10,7 +10,7 @@ import ChooseAccount from './routes/chooseaccount/ChooseAccount';
 import Deposit from './routes/deposit/Deposit';
 import Transfer from './routes/transfer/Transfer';
 import Withdraw from './routes/withdraw/Withdraw';
-import ViewBalance from './routes/ViewBalance/ViewBalance';
+import ViewBalance from './routes/viewBalance/ViewBalance';
 import SMainMenu from './routes/mainmenu/SMainMenu';
 import SDeposit from './routes/deposit/sDeposit';
 import SWithdraw from './routes/withdraw/sWithdraw';
