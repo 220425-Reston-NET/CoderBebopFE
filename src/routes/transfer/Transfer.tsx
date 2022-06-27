@@ -109,7 +109,7 @@ function Transfer(){
     
 
     return (
-    <div className="transfer-container"style ={{marginTop:'0rem'}}>
+    <div className="transfer-container"style ={{marginTop:'.5rem'}}>
         <h3><b>Welcome to the Transfer Page!</b></h3>
         <div> 
             <br></br>

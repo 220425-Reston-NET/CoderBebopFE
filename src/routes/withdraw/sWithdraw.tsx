@@ -50,10 +50,11 @@ export default function SWithdraw() {
 
   return (
     <form className="createcustomer-container" onSubmit={onSubmit}>
-      <h4>Welcome to the Savings Withdraw Page!</h4>
-      <h6>Please insert amount you would like to withdraw</h6>
+      <div className="transfer-container"style ={{marginTop:'-4rem'}}></div>
+      <h4><b>Welcome to the Savings Withdraw Page!</b></h4>
+      <h6>Please insert amount you would like to withdraw:</h6>
       <div className="form-group col-md-4 ">
-        <label htmlFor="inputName">$Withdraw Amount</label>
+        <label htmlFor="inputName"><b>Withdraw Amount</b></label>
         <div>
           <input
             type="text"
@@ -66,9 +67,9 @@ export default function SWithdraw() {
       <div>
         <br></br>
       </div>
-      <h6>Please enter your SSN to confirm the withdraw</h6>
+      <h6>Please enter your SSN to confirm the withdraw:</h6>
       <div className="form-group col-md-4 ">
-        <label htmlFor="inputPhoneNumber">SSN</label>
+        <label htmlFor="inputPhoneNumber"><b>SSN</b></label>
         <div>
           <input
             type="text"

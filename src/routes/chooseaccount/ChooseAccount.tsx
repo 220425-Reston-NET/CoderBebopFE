@@ -17,7 +17,7 @@ function DepositWithdraw() {
 
   return (
     <form className='chooseaccount'>
-      <h1>Which account would you like to access?</h1>
+      <h1><b>Which account would you like to access?</b></h1>
       <div className='container'>
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={goToMainMenu}>Checking</div></button>
         <button type="button" className="btn btn-primary btn-lg rightmarg"><div onClick={GotoSmainmenu}>Savings</div></button>          
