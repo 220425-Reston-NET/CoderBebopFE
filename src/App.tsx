@@ -14,8 +14,8 @@ import SMainMenu from './routes/mainmenu/SMainMenu';
 import SDeposit from './routes/deposit/sDeposit';
 import SWithdraw from './routes/withdraw/sWithdraw';
 import OrderHistory from './routes/orderhistory/OrderHIstory';
-import ViewBalance from './routes/viewBalance/ViewBalance';
-import SViewBalance from './routes/viewBalance/SViewBalance';
+import ViewBalance from './routes/ViewBalance/ViewBalance';
+import SViewBalance from './routes/ViewBalance/SViewBalance';
 
 function App() {
   return (
